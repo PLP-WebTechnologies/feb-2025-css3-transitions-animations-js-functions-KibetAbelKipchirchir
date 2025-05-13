@@ -1,0 +1,174 @@
+/* Base Styles */
+:root {
+    --primary-color: #4a6fa5;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --animation-speed: 0.3s;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Animation Sections */
+.animation-section, .preferences-section, .counter-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all var(--animation-speed) ease;
+}
+
+.dark-mode .animation-section, 
+.dark-mode .preferences-section, 
+.dark-mode .counter-section {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #f0f0f0;
+}
+
+/* Animation Box */
+.animation-box {
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all var(--animation-speed) ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.animation-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes spin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes rainbow {
+    0% { background-color: #ff0000; }
+    20% { background-color: #ffff00; }
+    40% { background-color: #00ff00; }
+    60% { background-color: #00ffff; }
+    80% { background-color: #0000ff; }
+    100% { background-color: #ff00ff; }
+}
+
+.spin-animation {
+    animation: spin var(--animation-speed) linear;
+}
+
+.pulse-animation {
+    animation: pulse var(--animation-speed) ease infinite;
+}
+
+.rainbow-animation {
+    animation: rainbow 2s linear infinite;
+}
+
+/* Counter Styles */
+.counter-display {
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(74, 111, 165, 0.1);
+    border-radius: 10px;
+}
+
+.counter-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Form Elements */
+.preference-control {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 30px;
+    padding: 2px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.dark-mode select {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}

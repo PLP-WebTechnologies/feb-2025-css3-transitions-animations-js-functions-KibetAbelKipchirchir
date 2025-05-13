@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Animation Playground</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Animation Playground</h1>
+        <div class="theme-switcher">
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="animation-section">
+            <h2>Click Animations</h2>
+            <div class="animation-box" id="click-box">
+                <p>Click me for a surprise!</p>
+            </div>
+            <button id="reset-animation">Reset Animation</button>
+        </section>
+
+        <section class="preferences-section">
+            <h2>Your Preferences</h2>
+            <div class="preference-control">
+                <label for="bg-color">Background Color:</label>
+                <input type="color" id="bg-color" value="#ffffff">
+            </div>
+            <div class="preference-control">
+                <label for="animation-speed">Animation Speed:</label>
+                <select id="animation-speed">
+                    <option value="slow">Slow</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="fast">Fast</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="counter-section">
+            <h2>Interactive Counter</h2>
+            <div class="counter-display">
+                <span id="counter-value">0</span>
+            </div>
+            <div class="counter-controls">
+                <button id="decrement">-</button>
+                <button id="increment">+</button>
+                <button id="reset-counter">Reset</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Your preferences are saved automatically!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
